@@ -11,7 +11,7 @@ function App() {
         <section className='info'>
           {
             questions.map((question) => {
-              return <SingleQuestion key={question.id} {...question}/>
+              return <SingleQuestion key={question.id} {...question} />
             })
           }
         </section>
