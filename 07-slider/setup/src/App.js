@@ -12,6 +12,20 @@ function App() {
           <span>/</span>reviews
         </h2>
       </div>
+      <div className="section-center">
+        {people.map((person, personIndex) => {
+          const {id, image, name, title, quote} = person;
+
+          return (
+            <article key={id}>
+              <img src={image} alt={name} className='person-img'/>
+              <h4>{name}</h4>
+              <p className="title">{title}</p>
+              <p className="text">{quote}</p>
+            </article>
+          );
+        })}
+      </div>
     </section>
   );
 }
