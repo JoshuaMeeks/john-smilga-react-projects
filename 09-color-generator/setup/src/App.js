@@ -16,7 +16,11 @@ function App() {
   return (
     <>
     <section className="container">
-
+      <h3>color generator</h3>
+      <form onSubmit={handleSubmit}>
+        <input type="text" value={color} onChange={(e) => setColor(e.target.value)} />
+        <button className="btn" type='submit'>submit</button>
+      </form>
     </section>
     <section className="colors">
       <h4>list goes here</h4>
