@@ -7,21 +7,24 @@ function App() {
   const [list, setList] = useState([]);
   const [isEditing, setIsEditing] = useState(false);
   const [editID, setEditID] = useState(null);
-  const [alert, setAlert] = useState({show: true, msg: 'hello world', type: 'success'});
+  const [alert, setAlert] = useState({show: false, msg: '', type: ''});
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!name) {
-      // display alert
+      showAlert(true, 'add an item', 'danger');
     }
     else if (name && isEditing) {
       // deal with edit
     }
     else {
-      // show alert
+      showAlert(true, 'item added', 'success');
       const newItem = {id: new Date().getTime().toString(), title: name};
       setList([...list, newItem]);
       setName('');
     }
+  }
+  const showAlert = (show= false, msg='', type='') => {
+    setAlert({show, msg, type})
   }
 
   return (
