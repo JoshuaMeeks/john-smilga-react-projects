@@ -14,7 +14,14 @@ function App() {
   }
 
   return (
+    <>
+    <section className="container">
 
+    </section>
+    <section className="colors">
+      <h4>list goes here</h4>
+    </section>
+    </>
   );
 }
 export default App
