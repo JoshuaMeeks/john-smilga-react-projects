@@ -14,6 +14,14 @@ const AppProvider = ({children}) => {
     setIsSidebarOpen(false);
   }
 
+    const openModal = () => {
+    setIsSidebarOpen(true);
+  }
+
+  const closeModal = () => {
+    setIsSidebarOpen(false);
+  }
+
   return <AppContext.Provider value="hello">{children}</AppContext.Provider>
 }
 
