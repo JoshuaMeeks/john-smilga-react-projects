@@ -22,7 +22,15 @@ const AppProvider = ({children}) => {
     setIsSidebarOpen(false);
   }
 
-  return <AppContext.Provider value="hello">{children}</AppContext.Provider>
+  return <AppContext.Provider 
+    value={{
+      isModalOpen, 
+      isSidebarOpen,
+      openModal,
+      closeModal,
+      openSidebar,
+      closeModal
+    }}>{children}</AppContext.Provider>
 }
 
 export const useGlobalContext = () => {
