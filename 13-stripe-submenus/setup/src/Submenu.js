@@ -4,7 +4,7 @@ import { useGlobalContext } from './context'
 const Submenu = () => {
   const {isSubmenuOpen} = useGlobalContext();
   return (
-    <aside></aside>
+    <aside className={`${isSubmenuOpen ? 'submenu show' : 'submenu'}`}></aside>
   );
 }
 
