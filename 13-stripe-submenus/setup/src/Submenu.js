@@ -13,7 +13,7 @@ const Submenu = () => {
   
   return (
     <aside className={`${isSubmenuOpen ? 'submenu show' : 'submenu'}`} ref={container}>
-      submenu
+      <h4>{page}</h4>
     </aside>
   );
 }
