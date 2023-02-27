@@ -14,7 +14,7 @@ const initialState = () = {
 }
 
 const AppProvider = ({ children }) => {
-  const [state, dispatch] = useReducer()
+  const [state, dispatch] = useReducer(initialState);
 
   return (
     <AppContext.Provider
