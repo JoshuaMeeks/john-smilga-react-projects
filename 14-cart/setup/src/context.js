@@ -6,7 +6,7 @@ import reducer from './reducer'
 const url = 'https://course-api.com/react-useReducer-cart-project'
 const AppContext = React.createContext()
 
-const initialState = () = {
+const initialState = {
   loading: false,
   cart: cartItems,
   total: 0,
@@ -19,7 +19,7 @@ const AppProvider = ({ children }) => {
   return (
     <AppContext.Provider
       value={{
-        ...state
+        ...state,
       }}
     >
       {children}
