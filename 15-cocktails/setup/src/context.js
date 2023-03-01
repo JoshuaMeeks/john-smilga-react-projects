@@ -20,6 +20,7 @@ const AppProvider = ({ children }) => {
           const {idDrink, strDrink, strDrinkThumb, strAlcoholic, strGlass} = item;
           return {id: idDrink, name: strDrink, image: strDrinkThumb, info: strAlcoholic, glass: strGlass}
         })
+        setCocktails(newCocktails);
       }
       else {
         setCocktails([]);
