@@ -15,11 +15,14 @@ const SingleCocktail = () => {
         const response = await fetch(`${url}${id}`)
         const data = await response.json();
         console.log(data);
-      } catch (error) {}
+      } catch (error) {
+        console.log(error);
+        setLoading(false);
+      }
     }
     getCocktail();
   }, [id])
-  
+
   return (
     <div>
       <h2>{id}</h2>
