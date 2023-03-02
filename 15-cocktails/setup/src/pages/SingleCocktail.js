@@ -13,6 +13,8 @@ const SingleCocktail = () => {
     async function getCocktail() {
       try {
         const response = await fetch(`${url}${id}`)
+        const data = await response.json();
+        console.log(data);
       } catch (error) {
         
       }
